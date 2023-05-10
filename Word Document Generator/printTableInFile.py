@@ -1,4 +1,3 @@
-import docx             # python -m pip install python-docx --user
 from docx.shared import Pt
 from docx.shared import Cm, Inches
 
@@ -69,11 +68,11 @@ def printTableInFile(row,doc):
         for cell in row.cells:
             paragraphs = cell.paragraphs
             for paragraph in paragraphs:
-                paragraph.paragraph_format.space_before = Pt(6)
+                paragraph.paragraph_format.space_before = Pt(3)
                 paragraph.paragraph_format.space_after = Pt(6)
                 for run in paragraph.runs:
                     font = run.font
-                    font.size= Pt(12)
+                    font.size= Pt(14)
                     font.name = 'Times New Roman'
 
     paragraph = doc.add_paragraph('')
